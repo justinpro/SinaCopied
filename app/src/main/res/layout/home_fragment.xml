@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+
+        <!--tabMode这个属性很重要，没有它将无法显示
+        而且必须用app:这个开头的才行
+        tabMode这个不行
+        app:tabMode="scrollable"-->
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/title_tab"
+            app:tabMode="scrollable"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp">
+        </android.support.design.widget.TabLayout>
+
+        <ImageView
+            android:id="@+id/title_edit"
+            android:src="@drawable/ic_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

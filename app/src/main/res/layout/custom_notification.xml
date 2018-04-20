@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/notification_icon"
+        android:src="@drawable/icon"
+        android:layout_gravity="center"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+            android:id="@+id/notification_title"
+            android:text="Download"
+            android:textSize="10dp"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <ProgressBar
+            android:id="@+id/download_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"/>
+    </LinearLayout>
+</LinearLayout>
